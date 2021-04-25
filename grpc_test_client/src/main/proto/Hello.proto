@@ -13,4 +13,7 @@ message HelloResponse {
 
 service HelloService {
   rpc hello(HelloRequest) returns (HelloResponse);
+  rpc helloServerStream(HelloRequest) returns (stream HelloResponse);
+  rpc helloClientStream(stream HelloRequest) returns (HelloResponse);
+  rpc helloBiStream(stream HelloRequest) returns (stream HelloResponse);
 }
