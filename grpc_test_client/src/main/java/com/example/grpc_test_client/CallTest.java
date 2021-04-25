@@ -31,8 +31,8 @@ public class CallTest {
     caller.sendBlockingUnary(requestList.get(0));
     caller.sendAsynUnary(requestList.get(0));
     caller.sendFutureUnary(requestList.get(0));
-    caller.sendAsynServerStream(requestList.get(0));
     caller.sendBlockingServerStream(requestList.get(0));
+    caller.sendAsynServerStream(requestList.get(0));
     caller.sendAsynClientStream(requestList);
     caller.sendAsynBiStream(requestList);
   }
