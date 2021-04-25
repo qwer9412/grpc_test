@@ -43,9 +43,7 @@ public class HelloServiceImpl extends HelloServiceImplBase {
     responseObserver.onCompleted();
   }
 
-  /**
-   *
-   */
+  @Override
   public StreamObserver<com.example.grpc_test.proto.HelloRequest> helloClientStream(
       StreamObserver<HelloResponse> responseObserver) {
     return new StreamObserver<HelloRequest>() {
@@ -68,9 +66,7 @@ public class HelloServiceImpl extends HelloServiceImplBase {
     };
   }
 
-  /**
-   *
-   */
+  @Override
   public StreamObserver<HelloRequest> helloBiStream(
       StreamObserver<HelloResponse> responseObserver) {
     return new StreamObserver<HelloRequest>() {
